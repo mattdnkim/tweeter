@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+ 
+}
+
+/*
+ * Global layout stuff
+ */
+
+ nav {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+  font-size: 36px;
+  height: 120px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0.3em;
+ }
+
+.nav-tweet {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.write-a-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-angle-double-down {
+  display: flex;
+  padding-left: 5em;
+  color: red;
+}
+  
+  
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */

@@ -1,0 +1,151 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .counter {
+      display: flex;
+      justify-content: space-around;
+      font-family: 'Bungee',cursive;
+  }
+    
+ .tweet-text {
+     display: flex;
+    border-bottom-style: solid;
+    width: 100%;
+    border-bottom: 5px solid black;
+    margin: 1em;
+    height: 49px;
+    background-color: burlywood;
+ }
+    
+
+ .submit {
+    background-color: #4056A1;
+    color: #FFFFFF;
+    font-family: 'Bungee', cursive;
+    font-size: 24px;
+  }
+
+  .container {  
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2em;
+    background-color: coral;
+  }
+
+  .tweet-number {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .tweets-container {
+    display: flex;
+    border-style: solid;
+    border-bottom: black solid 2px;
+    border-top: solid black 2px;
+    border-left: black solid 2px;
+    border-right: solid black 2px; 
+    padding-top: 1em;
+    font-family: "Source Sans Pro", sans-serif;
+    width:90%;
+    margin: auto;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .tweets-container:hover {
+    box-shadow: 20px 20px rgb(140, 135, 135);
+
+  }
+  .names {display: flex;
+          justify-content: space-between;
+
+  }
+
+  #username {
+    font-weight: bold;
+    float: right;
+  }
+
+  .time {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    padding-left: 1em;
+    flex-direction: row;
+  }
+  
+  .fa-flag {
+    width: 20px;
+    height: 20px;
+    color:blueviolet
+  }
+  .fa-flag:hover {
+    color: blue;
+  }
+  .fa-retweet {
+    width: 22px;
+    height: 22px;
+    color:blueviolet
+  }
+  .fa-retweet:hover {
+    color: blue;
+  }
+  .fa-heart {
+    width:18px;
+    height:18px;
+    color: blueviolet;
+  }
+  .fa-heart:hover {
+    color: blue;
+  }
+
+.tweet-box{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.tweet-word{
+  display: flex;
+  align-self:flex-start;
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: bold;
+}
+
+.icon {
+  display: flex;
+  justify-content: right;
+
+}
+
+.name {
+  color: white;
+}
+
+#error-container {
+  display: none;
+    border-style: solid;
+    border-bottom: red solid 3px;
+    border-top: red solid 3Px;
+    border-left: red solid 3px;
+    border-right: red solid 3px;
+    width: 70%;
+    font-family: "Bungee", cursive;
+   }
+

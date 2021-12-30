@@ -12,13 +12,23 @@ html {
 
 /*
  * Global layout stuff
- */
+ */ 
 
 body {
+  font-family: "Source Sans Pro", sans-serif;
   color: #545149;
-  background-color: #f4f1ec;
+  /* background-color: #2d9e00;
+background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png"); */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   font-size: 24px;
+  padding-bottom: 2em;
+  background-color: #2d9e00;
+    background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
 }
+
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
