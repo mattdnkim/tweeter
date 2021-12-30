@@ -21,5 +21,6 @@ This repository is for the tweeter project.
 1. To compose a tweet, click the red arrow below 'Write a Tweet'
 
 ##Screenshot
-!["screenshot of Tweet List"](https://github.com/mattdnkim/tweeter/blob/master/docs/Tweet%20list.png)
 !["screenshot of Tweet Box"](https://github.com/mattdnkim/tweeter/blob/master/docs/tweet%20box.png)
+!["screenshot of Tweet List"](https://github.com/mattdnkim/tweeter/blob/master/docs/Tweet%20list.png)
+
