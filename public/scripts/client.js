@@ -1,9 +1,6 @@
 $(document).ready(function() {
   
   const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
     const container = $('#tweets-container');
     for (const element of tweets) {
       const $tweet =  createTweetElement(element);
@@ -12,8 +9,7 @@ $(document).ready(function() {
     return container
   };
 
-  const createTweetElement = function(tweet) {
-  /* Your code for creating the tweet element */
+  const createTweetElement = function(tweet) {//Tweet box design
     let $tweet = `
     <div class="tweets-container">
     <div id="names">
@@ -37,7 +33,7 @@ ${tweet.content.text}
 return $tweet;
   };
 
-  const loadTweets = function() {
+  const loadTweets = function() { //Load the past tweets
     $.ajax({
       url: '/tweets',
       method:'get',
@@ -54,7 +50,7 @@ return $tweet;
 
   loadTweets()
 
-  $('#tweet-form').submit(function(event) {
+  $('#tweet-form').submit(function(event) { //This function controls the tweet behavior.
     event.preventDefault();
     const errorContainer = $('#error-container')
     const data = $(this).serialize();
@@ -69,8 +65,7 @@ return $tweet;
     } )
     return errorContainer
      }
-
-    if(data.length === 5) {
+     if(data.length === 5) {
       return alert("Say something!")
     }
     $.ajax({
@@ -81,14 +76,25 @@ return $tweet;
         console.log("successfully sent the data to the server");
         loadTweets()
         $('#tweet-text').val('')
-        
-      },
+        },
       error:function() {
         console.log("error");
       }
     });
+    $('#counter').text('140')
   });
-});
+  
+  $('.fa-angle-double-down').click(function(event) { //compose Tweet
+    event.preventDefault();
+    const container = $('#container')
+     container.slideDown( 'slow', 
+    () => {
+     return container
+    })
+     });
+   });
+
+
 
   
     

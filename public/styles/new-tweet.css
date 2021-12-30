@@ -21,28 +21,29 @@ html {
     background-color: burlywood;
  }
     
-
- .submit {
+.submit {
     background-color: #4056A1;
     color: #FFFFFF;
     font-family: 'Bungee', cursive;
     font-size: 24px;
+    cursor: pointer;
   }
 
-  .container {  
+#container {  
+  display: none ;
     width: 90%;
     margin: auto;
     padding-bottom: 2em;
     background-color: coral;
   }
 
-  .tweet-number {
+.tweet-number {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
   
-  .tweets-container {
+.tweets-container {
     display: flex;
     border-style: solid;
     border-bottom: black solid 2px;
@@ -63,14 +64,13 @@ html {
     margin-bottom: 1em;
   }
   
-  .tweets-container:hover {
+.tweets-container:hover {
     box-shadow: 20px 20px rgb(140, 135, 135);
+}
 
-  }
-  .names {display: flex;
+.names {display: flex;
           justify-content: space-between;
-
-  }
+}
 
   #username {
     font-weight: bold;
@@ -91,24 +91,32 @@ html {
     height: 20px;
     color:blueviolet
   }
+
   .fa-flag:hover {
     color: blue;
+    cursor: pointer;
   }
+
   .fa-retweet {
     width: 22px;
     height: 22px;
     color:blueviolet
   }
+
   .fa-retweet:hover {
     color: blue;
+    cursor: pointer;
   }
+
   .fa-heart {
     width:18px;
     height:18px;
     color: blueviolet;
   }
+
   .fa-heart:hover {
     color: blue;
+    cursor: pointer;
   }
 
 .tweet-box{
@@ -131,7 +139,6 @@ html {
 .icon {
   display: flex;
   justify-content: right;
-
 }
 
 .name {

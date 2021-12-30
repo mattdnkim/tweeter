@@ -41,7 +41,10 @@ html {
   display: flex;
   padding-left: 5em;
   color: red;
+  cursor: pointer;
 }
+
+
   
   
 

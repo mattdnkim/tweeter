@@ -1,13 +1,9 @@
 html {
     box-sizing: border-box;
-  
   }
   *, *:before, *:after {
     box-sizing: inherit;
-   
-  }
-
-
+   }
 
 .header {
     display: flex;
@@ -21,7 +17,8 @@ header {
     background-color: #2d9e00;
     background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
   }
-.logo {
+
+  .logo {
   padding: 6em;
   padding-bottom: 0 ;
 }
