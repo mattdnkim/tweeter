@@ -48,7 +48,6 @@ return $tweet;
   };
 
   loadTweets()
-
   $("#tweet-form").submit(function(event) { //This function controls the tweet behavior.
     event.preventDefault();
     const errorContainer = $("#error-container")
@@ -63,6 +62,9 @@ return $tweet;
     () => {
       errorContainer.prepend("Tweeet Limit is 140!")
     } )
+    setTimeout(() => {
+    $("#error-container").slideUp("slow")  
+    }, 2000); 
     return errorContainer
      }
      if(!tweet) {
@@ -70,6 +72,9 @@ return $tweet;
     () => {
       errorContainer.prepend("Say something please!")
     } )
+    setTimeout(() => {
+      $("#error-container").slideUp("slow")  
+      }, 2000);
     return errorContainer
     }
     $.ajax({
@@ -80,6 +85,7 @@ return $tweet;
         console.log("successfully sent the data to the server");
         $("#tweets-container").empty()
         $("#tweet-text").val("")
+        $("#tweet-text").empty()
         $("#counter").text("140")
         loadTweets()
         },
