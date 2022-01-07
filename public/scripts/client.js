@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   const renderTweets = function(tweets) {
-    const container = $('#tweets-container');
+    const container = $("#tweets-container");
     for (const element of tweets) {
       const $tweet =  createTweetElement(element);
        container.prepend($tweet);
@@ -35,11 +35,10 @@ return $tweet;
 
   const loadTweets = function() { //Load the past tweets
     $.ajax({
-      url: '/tweets',
-      method:'get',
+      url: "/tweets",
+      method:"get",
       success:function(data) {
         console.log("succeessfully got the data from the server");
-        console.log("data", data)
         renderTweets(data)
       },
       error:function() {
@@ -50,44 +49,46 @@ return $tweet;
 
   loadTweets()
 
-  $('#tweet-form').submit(function(event) { //This function controls the tweet behavior.
+  $("#tweet-form").submit(function(event) { //This function controls the tweet behavior.
     event.preventDefault();
-    const errorContainer = $('#error-container')
+    const errorContainer = $("#error-container")
     const data = $(this).serialize();
-    $('#error-container').slideUp( 'slow', 
+    const tweet = data.length - 5;
+    $("#error-container").slideUp( "slow", 
     () => {
       errorContainer.text("")
     } )
-    if(data.length > 145) {
-    $('#error-container').slideDown( 'slow', 
+    if(tweet > 140) {
+    $("#error-container").slideDown( "slow", 
     () => {
       errorContainer.prepend("Tweeet Limit is 140!")
     } )
     return errorContainer
      }
-     if(data.length === 5) {
+     if(!tweet) {
       return alert("Say something!")
     }
     $.ajax({
-      url:'/tweets',
-      method:'post',
+      url:"/tweets",
+      method:"post",
       data:data,
       success:function(data) {
         console.log("successfully sent the data to the server");
+        $("#tweets-container").empty()
+        $("#tweet-text").val("")
+        $("#counter").text("140")
         loadTweets()
-        $('#tweet-text').val('')
         },
       error:function() {
         console.log("error");
       }
     });
-    $('#counter').text('140')
   });
   
-  $('.fa-angle-double-down').click(function(event) { //compose Tweet
+  $(".fa-angle-double-down").click(function(event) { //compose Tweet
     event.preventDefault();
-    const container = $('#container')
-     container.slideDown( 'slow', 
+    const container = $("#container")
+     container.slideDown( "slow", 
     () => {
      return container
     })

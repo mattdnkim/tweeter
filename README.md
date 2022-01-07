@@ -18,4 +18,4 @@ This repository is for the tweeter project.
 
 ## How to Use
 
-1. To compose a tweet, click the red arrow below 'Write a Tweet'
+1. To compose a tweet, click the red arrow below "Write a Tweet"
