@@ -66,7 +66,11 @@ return $tweet;
     return errorContainer
      }
      if(!tweet) {
-      return alert("Say something!")
+      $("#error-container").slideDown( "slow", 
+    () => {
+      errorContainer.prepend("Say something please!")
+    } )
+    return errorContainer
     }
     $.ajax({
       url:"/tweets",
