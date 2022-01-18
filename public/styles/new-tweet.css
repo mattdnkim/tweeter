@@ -143,6 +143,7 @@ html {
 
 .name {
   color: white;
+  margin-left: 25%;
 }
 
 #error-container {
@@ -155,4 +156,6 @@ html {
     width: 70%;
     font-family: "Bungee", cursive;
    }
+
+   
 

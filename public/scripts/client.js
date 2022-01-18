@@ -54,7 +54,7 @@ ${tweet.content.text}
     event.preventDefault();
     const errorContainer = $("#error-container");
     const data = $(this).serialize();
-    const tweet = data.length - 5;
+    const tweet = data.length - 5; //const data has actually 5 more character than the user typed.
     $("#error-container").slideUp("slow", () => {
       errorContainer.text("");
     });

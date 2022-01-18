@@ -4,7 +4,7 @@ $(document).ready(function () {
     let content = $(this).val();
     $("#counter").text(maxChar - content.length);
     if (content.length > 140) {
-      $("#counter").css("color", "red");
+      $("#counter").css("color", "red"); //when the tweet exceeds 140 char, the counter becomes red
     } else {
       $("#counter").css("color", "#545149");
     }
