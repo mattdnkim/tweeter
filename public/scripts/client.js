@@ -1,15 +1,15 @@
-$(document).ready(function() {
-  
-  const renderTweets = function(tweets) {
+$(document).ready(function () {
+  const renderTweets = function (tweets) {
     const container = $("#tweets-container");
     for (const element of tweets) {
-      const $tweet =  createTweetElement(element);
-       container.prepend($tweet);
+      const $tweet = createTweetElement(element);
+      container.prepend($tweet);
     }
-    return container
+    return container;
   };
 
-  const createTweetElement = function(tweet) {//Tweet box design
+  const createTweetElement = function (tweet) {
+    //Tweet box design
     let $tweet = `
     <div class="tweets-container">
     <div id="names">
@@ -28,86 +28,78 @@ ${tweet.content.text}
     <i class="fas fa-retweet"></i>
   <i class="fas fa-heart"></i>
 </div>
-</div>`
-    
-return $tweet;
+</div>`;
+
+    return $tweet;
   };
 
-  const loadTweets = function() { //Load the past tweets
+  const loadTweets = function () {
+    //Load the past tweets
     $.ajax({
       url: "/tweets",
-      method:"get",
-      success:function(data) {
+      method: "get",
+      success: function (data) {
         console.log("succeessfully got the data from the server");
-        renderTweets(data)
+        renderTweets(data);
       },
-      error:function() {
+      error: function () {
         console.log("error");
-      }
+      },
     });
   };
 
-  loadTweets()
-  $("#tweet-form").submit(function(event) { //This function controls the tweet behavior.
+  loadTweets();
+  $("#tweet-form").submit(function (event) {
+    //This function controls the tweet behavior.
     event.preventDefault();
-    const errorContainer = $("#error-container")
+    const errorContainer = $("#error-container");
     const data = $(this).serialize();
     const tweet = data.length - 5;
-    $("#error-container").slideUp( "slow", 
-    () => {
-      errorContainer.text("")
-    } )
-    if(tweet > 140) {
-    $("#error-container").slideDown( "slow", 
-    () => {
-      errorContainer.prepend("Tweeet Limit is 140!")
-    } )
-    setTimeout(() => {
-    $("#error-container").slideUp("slow")  
-    }, 2000); 
-    return errorContainer
-     }
-     if(!tweet) {
-      $("#error-container").slideDown( "slow", 
-    () => {
-      errorContainer.prepend("Say something please!")
-    } )
-    setTimeout(() => {
-      $("#error-container").slideUp("slow")  
+    $("#error-container").slideUp("slow", () => {
+      errorContainer.text("");
+    });
+    if (tweet > 140) {
+      $("#error-container").slideDown("slow", () => {
+        errorContainer.prepend("Tweeet Limit is 140!");
+      });
+      setTimeout(() => {
+        $("#error-container").slideUp("slow");
       }, 2000);
-    return errorContainer
+      return errorContainer;
+    }
+    if (!tweet) {
+      $("#error-container").slideDown("slow", () => {
+        errorContainer.prepend("Say something please!");
+      });
+      setTimeout(() => {
+        $("#error-container").slideUp("slow");
+      }, 2000);
+      return errorContainer;
     }
     $.ajax({
-      url:"/tweets",
-      method:"post",
-      data:data,
-      success:function(data) {
+      url: "/tweets",
+      method: "post",
+      data: data,
+      success: function (data) {
         console.log("successfully sent the data to the server");
-        $("#tweets-container").empty()
-        $("#tweet-text").val("")
-        $("#tweet-text").empty()
-        $("#counter").text("140")
-        loadTweets()
-        },
-      error:function() {
+        $("#tweets-container").empty();
+        $("#tweet-text").val("");
+        $("#tweet-text").empty();
+        $("#counter").text("140");
+        loadTweets();
+      },
+      error: function () {
         console.log("error");
-      }
+      },
     });
   });
-  
-  $(".fa-angle-double-down").click(function(event) { //compose Tweet
+
+  $(".fa-angle-double-down").click(function (event) {
+    //compose Tweet
     event.preventDefault();
-    const container = $("#container")
-     container.slideDown( "slow", 
-    () => {
-     return container
-    })
-     });
-   });
-
-
-
-  
-    
-  
-
+    const container = $("#container");
+    container.slideDown("slow", () => {
+      return container;
+    });
+  });
+});

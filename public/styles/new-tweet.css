@@ -5,10 +5,10 @@ html {
     box-sizing: inherit;
   }
   
-  .counter {
-      display: flex;
+  #counter {
+      display:flex;
       justify-content: space-around;
-      font-family: "Bungee",cursive;
+      font-family: "Bungee",cursive; 
   }
     
  .tweet-text {
