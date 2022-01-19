@@ -45,6 +45,7 @@ background-image: url("https://www.transparenttextures.com/patterns/brushed-alum
   .footer {
     clear: right;
   }
+
 }
 
 /* style for the desktop */
@@ -84,6 +85,16 @@ background-image: url("https://www.transparenttextures.com/patterns/brushed-alum
   
   #tweets-container {
     margin-top: 16%;
+  }
+
+  #error-container {
+    display: none;
+    text-align: center;
+    font-family: "Bungee", cursive;
+    padding-top: 1em;
+     }
+  .tweet-box {
+    margin-top: 2em;
   }
 }
 

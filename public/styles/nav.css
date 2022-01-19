@@ -25,7 +25,6 @@ html {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  top: 0.3em;
  }
 
 .nav-tweet {
@@ -42,6 +41,14 @@ html {
   padding-left: 5em;
   color: red;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    position: static;
+    background-color: #2d9e00;
+    background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+  }
 }
 
 

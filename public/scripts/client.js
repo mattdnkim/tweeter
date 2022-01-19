@@ -97,7 +97,7 @@ ${tweet.content.text}
   $(".fa-angle-double-down").click(function (event) {
     //compose Tweet
     event.preventDefault();
-    const container = $("#container");
+    const container = $("#new-tweet");
     container.slideDown("slow", () => {
       return container;
     });
