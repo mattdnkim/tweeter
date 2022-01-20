@@ -23,7 +23,7 @@ html {
   padding-bottom: 1.2em;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position:static;
   width: 100%;
  }
 
@@ -46,8 +46,7 @@ html {
 @media only screen and (min-width: 1024px) {
   nav {
     position: static;
-    background-color: #2d9e00;
-    background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+    background-color:#4056A1;
   }
 }
 
